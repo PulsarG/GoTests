@@ -24,10 +24,14 @@ func main() {
 
 	fmt.Println(pointMap)
 
-if pointMap == nil {
-	pointMap["a"]=Point{1,2}
-} else {
-	fmt.Println("123")
-}
+	if pointMap == nil {
+		pointMap["a"] = Point{1, 2}
+	} else {
+		fmt.Println("123")
+	}
 
+	for k, v := range pointMap {   // ! TODO: пробег по всей мапе в рендже всех ключей
+		fmt.Println(k)
+		fmt.Println(v)
+	}
 }
