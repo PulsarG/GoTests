@@ -1,0 +1,59 @@
+Отправка в Гитхаб комита:
+
+в терминале прописать:    git commit -m "комментарий или название коммита"
+
+отправка на сервер Гита для публикации:   git push
+
+
+
+
+
+var PEREMENNAJA int          //объявление переменной без инициализации
+var PEREMENNAJA = 3          //обяъвление переменной с инициализацией
+PEREMENNAJA := 3             //крастное объявление переменной с инициализацией
+
+// string   int   float32   bool ...
+
+const                         // перед любым объявлением делает переменную константой без возможности повторного присваивания значения
+
+func FUNCTION (передаваемые переменные в функцию) T_PEREMENNOY_FOR_RETURN {                //объявление функции
+return ZNACHENIE
+}
+
+name := [i]PEREMENNAJA{...}       //объявление массива - слайса -можно без i - слайсы динамические
+
+for Index := range PEREMENNAJA {                                       //перебор массива
+    fmt.Printf( format: "", Index+1, PEREMENNAJA[Index])
+}
+
+for i := 0; i < len(PEREMENNAJA); i++ {
+    fmt.Printf( format: "", PEREMENNAJA[i])
+}
+
+ PEREMENNAJA = append(PEREMENNAJA, elems...: "", "")           //добавление в слайса
+
+ PEREMENNAJA := map[string]string {                          //объявление МАПы
+     "ключ" : "значение",
+ }
+ fmt.Printf(PEREMENNAJA["Ключ"])               //вывод из мапы по ключу
+
+
+ type PEREMENNAJA struct {             //объявление структуры
+     qwer string
+     qwert string
+ }
+
+ P1 := PEREMENNAJA{                         //создание объекта стуктуры 
+     qwer = "",
+     qwert = "",
+ }
+
+ fmt.Printf(P1)
+ fmt.Printf(P1.qwer)
+
+
+ func (P *PEREMENNAJA) setName (name string){         //работа структуры с функциями
+     p.qwee = name
+ }
+
+ P1.setName(name: "")

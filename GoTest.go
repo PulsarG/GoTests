@@ -1,36 +1,33 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
-type Payer interface {
-	Pay(int) error
+type Point struct {
+	X int
+	Y int
 }
 
-type Wallet struct{
-	Cash int
-}
+func main() {
 
-func (w *Wallet) Pay (amount int) error{
-	if w.Cash < amount {
-		return fmt.Errorf("Not money")
+	pointMap := map[string]Point{
+		"c": {
+			X: 4,
+			Y: 5,
+		},
 	}
-	w.Cash -= amount
 
-	return nil
-}
-
-
-func Buy (p Payer) {
-	err := p.Pay(10)
-	if err != nil{
-		panic(err)
+	pointMap["a"] = Point{
+		X: 1,
+		Y: 2,
 	}
-	fmt.Printf("TY for buy %T\n\n", p)
+	pointMap["b"] = Point{3, 4}
+
+	fmt.Println(pointMap)
+
+if pointMap == nil {
+	pointMap["a"]=Point{1,2}
+} else {
+	fmt.Println("123")
 }
 
-func main(){
-	myWallet := &Wallet{Cash: 100}
-	Buy(myWallet)
 }
